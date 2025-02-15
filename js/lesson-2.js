@@ -8,6 +8,23 @@
 // Використайте цикл for для перебору елементів масиву.
 // Нумерація елементів повинна починатися з 1 (а не з 0).
 
+// const styles = ['jazz', 'blues'];
+// styles.push('rock-n-roll');
+// console.log(styles);
+// for (let index = 0; index < styles.length; index++) {
+//   if (styles[index] === 'blues') {
+//     styles[index] = 'classic';
+//     console.log(styles);
+//   }
+// }
+
+// function logItems(array) {
+//   for (let i = 0; i < array.length; i += 1) {
+//     console.log(`${i + 1}-${array[i]}`);
+//   }
+// }
+// logItems(styles);
+
 // ------------------------------------------------------------------------------------------
 // Напишіть функцію checkLogin(array), яка:
 // Приймає масив логінів як аргумент.
@@ -23,6 +40,17 @@
 // яка приймає довільну кількість
 // аргументів і повертає їхнє середнє значення.
 // Додайте перевірку, що аргументи - це числа.
+
+// function calculateAverage(...args) {
+//   let sum = 0;
+//   for (const arg of args) {
+//     if (typeof arg === 'number') {
+//       sum += arg;
+//     }
+//   }
+//   return sum / args.length;
+// }
+// console.log(calculateAverage(13, 3, 26, true, 'world'));
 
 // ------------------------------------------------------------------------------------------
 // Напишіть функцію, яка сумуватиме сусідні числа
@@ -41,7 +69,22 @@
 // якщо функція отримує масив - поверніть з функції найменше число,
 // в іншому випадку - поверніть 'Sory, it is not an array!'.
 
-// const numbers = [2, 5, 35, 56, 12, 24, 7, 80, 3];
+// const numbers = [2, 26, 94, 14, 1];
+
+// function findSmallestNumber(numbers) {
+//   if (!Array.isArray(numbers)) {
+//     return 'Sory, it is not an array!';
+//   }
+//   let min = numbers[0];
+//   for (const number of numbers) {
+//     if (number < min) {
+//       min = number;
+//     }
+//   }
+//   return min;
+// }
+
+// console.log(findSmallestNumber(numbers));
 
 // ------------------------------------------------------------------------------------------
 // Напишіть функцію findLongestWord(string), яка
@@ -98,10 +141,22 @@
 // назвою фрукта, це також треба урахувати.
 
 // const fruits = [
-//     { name: "Яблуко", price: 45, quantity: 7 },
-//     { name: "Апельсин", price: 60, quantity: 4 },
-//     { name: "Банан", price: 125, quantity: 8 },
-//     { name: "Груша", price: 350, quantity: 2 },
-//     { name: "Виноград", price: 440, quantity: 3 },
-//     { name: "Банан", price: 125, quantity: 3 },
-//   ];
+//   { name: 'Яблуко', price: 45, quantity: 7 },
+//   { name: 'Апельсин', price: 60, quantity: 4 },
+//   { name: 'Банан', price: 125, quantity: 8 },
+//   { name: 'Груша', price: 350, quantity: 2 },
+//   { name: 'Виноград', price: 440, quantity: 3 },
+//   { name: 'Банан', price: 125, quantity: 3 },
+// ];
+
+// console.log(calcTotalPrice(fruits, 'Виноград'));
+
+// function calcTotalPrice(fruits, fruitName) {
+//   let totalPrice = 0;
+//   for (const fruit of fruits) {
+//     if (fruit.name === fruitName) {
+//       totalPrice += fruit.price * fruit.quantity;
+//     }
+//   }
+//   return totalPrice;
+// }
